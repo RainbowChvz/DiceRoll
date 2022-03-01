@@ -2,7 +2,7 @@ package com.chaveze.diceroll
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            Toast.makeText(this, "Dice rolled!", Toast.LENGTH_SHORT).show()
+            val resultTextView: TextView = findViewById(R.id.textView)
+            resultTextView.setText("${(1..6).random()}")
         }
     }
 }
