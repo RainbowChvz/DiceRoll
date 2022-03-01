@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         diceImage.setImageResource(res)
+        diceImage.contentDescription = diceRoll.toString()
     }
 }
 
